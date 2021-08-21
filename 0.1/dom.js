@@ -9,7 +9,7 @@ function init_chat() {
 	Timezone: Fetching <br/>
 	<div id="ctime">Connection: 00:00:00</div>
 	<button type="button" onclick="list.blacklist_this()">Blacklist this IP</button>
-	<button type="button" onclick="list.whitelist_this()">Whitelist this IP</button> <br/>
+	<button type="button" onclick="list.whitelist_this()">Whitelist this IP</button>
 	<button type="button" onclick="dclick.new_connection()">New Connection</button>
 	<button type="button" onclick="dclick.discconect()">Skip</button>
 	<button type="button" onclick="dclick.reroll_skip()">Skip and stop reroll</button> <br/>
@@ -28,8 +28,11 @@ const newItem = document.createElement("div");
 newItem.innerHTML = /* html */`
 	<div style="width: 400px;height: 20px;margin-top: 7px;margin-right: auto;margin-bottom: auto;margin-left: auto;"> 
 		<input id="texbox_ip"> 
+		<input id="texbox_country"> 
 		<button type="button" onclick="list.blacklist()">Blacklist</button>
 		<button type="button" onclick="list.whitelist()">Whitelist</button>
+		<button type="button" onclick="countries_list.blacklist_this()">Blacklist Country</button>
+		<button type="button" onclick="countries_list.whitelist_this()">Whitelist Country</button><br/>
 	</div>
 	<div style="width: 300px;height: 20px;margin-top: 4px;margin-right: auto;margin-bottom: auto;margin-left: auto;"> 
 		<style>
@@ -48,7 +51,7 @@ newItem.innerHTML = /* html */`
 			<input type="checkbox" id="banhistory" checked> 
 			<span class="slider round"></span>
 		</label>
-		<div style="position: absolute; margin-left: 38px;">No same person twice</div>
+		<div style="position: absolute; margin-top: 30px; margin-left: 38px;">No same person twice</div>
 		
 	</div>
 	<div style="position: absolute;width: 200px;right: 260px;top: 0px;color: #9CF;font-size: 1.1em;">
