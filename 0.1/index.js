@@ -1,3 +1,7 @@
+const countries = {
+	blacklist: [],
+	whitelist: []
+};
 const ips = {
 	blacklist: [],
 	whitelist: [],
@@ -178,6 +182,27 @@ const dclick = {
 		btn.click();
 	}
 }; 
+
+const countries_list = {
+	blacklist: function () {
+		const x = $("texbox_country");
+		countries.blacklist.push(x.value);
+		x.value = "";
+	},
+// 	blacklist_this: function() {
+// 		ips.blacklist.push(ips.history[ips.history.length - 1]);
+// 		dclick.discconect();
+// 	},
+	whitelist: function () {
+		const x = $("texbox_country");
+		countries.whitelist.push(x.value);
+		x.value = "";
+	},
+// 	whitelist_this: function () {
+// 		ips.whitelist.push(ips.history[ips.history.length - 1]);
+// 	}
+};
+
 
 const list = {
 	blacklist: function () {
